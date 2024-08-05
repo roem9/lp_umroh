@@ -1,0 +1,11 @@
+.spg-border-danger {
+	border: 3px solid red !important;
+}
+.spg-border-success:focus {
+	border: 3px solid green !important;
+}
+.affiliate-link-title {
+    line-height: 2 !important;
+    font-weight: 700 !important;
+    font-size: .9rem !important;
+}
