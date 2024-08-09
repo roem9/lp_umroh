@@ -159,20 +159,6 @@ flexibility(document.documentElement);
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-ce576c1 elementor-widget elementor-widget-spg_pixel" data-id="ce576c1" data-element_type="widget" data-widget_type="spg_pixel.default">
 				<div class="elementor-widget-container">
-			            <!-- Facebook Pixel Code -->
-            <script>!function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                    n.queue=[];t=b.createElement(e);t.async=!0;
-                    t.src=v;s=b.getElementsByTagName(e)[0];
-                    s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '357118257189921');
-                fbq('track', 'PageView');
-                fbq('track', 'ViewContent');</script>
-        <noscript><img decoding="async" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=357118257189921&ev=PageView&noscript=1"></noscript>
-        <!-- End Facebook Pixel Code -->
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-77ac47ea elementor-invisible elementor-widget elementor-widget-heading" data-id="77ac47ea" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
@@ -1094,7 +1080,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				<div class="elementor-element elementor-element-10fd4f5 elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="10fd4f5" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="d0b5d7f0-b863-4908-8caa-cc4386c39bb4" href="https://api.whatsapp.com/send?phone=620812345678&amp;text=Assalamualaykum..%20Saya%20tertarik%20ikut%20program%20%2Amentoring%207%20hari%20%22Jualan%20Produk%20Umroh%22%2A.%20Mohon%20info%20caranya..." target="_blank" class="elementor-button-link elementor-button button-261 elementor-size-sm">
+			<a id="d0b5d7f0-b863-4908-8caa-cc4386c39bb4" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaykum..%20Saya%20tertarik%20ikut%20program%20%2Amentoring%207%20hari%20%22Jualan%20Produk%20Umroh%22%2A.%20Mohon%20info%20caranya..." target="_blank" class="elementor-button-link elementor-button button-261 elementor-size-sm">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">DAFTAR SEKARANG</span>
@@ -1103,7 +1089,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 		</div>
 
         <script>jQuery(document).ready(function($) {
-                number = '0812345678';
+                number = '<?= $agent['no_wa']?>';
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
@@ -1379,5 +1365,15 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 <script src="<?= base_url()?>/public/assets/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.23.1" id="elementor-frontend-js"></script>
 <script src="<?= base_url()?>/public/assets/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.21.2" id="pro-elements-handlers-js"></script>
 			<script>/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);</script>
-				</body>
+				
+<?php 
+	if(!empty($pixel)){
+		foreach ($pixel as $pixel) {
+			echo $pixel['code_pixel'];
+		}
+	}
+?>
+
+		
+		</body>
 </html>

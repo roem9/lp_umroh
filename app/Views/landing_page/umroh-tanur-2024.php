@@ -165,20 +165,6 @@ flexibility(document.documentElement);
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-b7d487c elementor-widget elementor-widget-spg_pixel" data-id="b7d487c" data-element_type="widget" data-widget_type="spg_pixel.default">
 				<div class="elementor-widget-container">
-			            <!-- Facebook Pixel Code -->
-            <script>!function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                    n.queue=[];t=b.createElement(e);t.async=!0;
-                    t.src=v;s=b.getElementsByTagName(e)[0];
-                    s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '357118257189921');
-                fbq('track', 'PageView');
-                fbq('track', 'ViewContent');</script>
-        <noscript><img decoding="async" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=357118257189921&ev=PageView&noscript=1"></noscript>
-        <!-- End Facebook Pixel Code -->
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-666956b5 elementor-widget elementor-widget-heading" data-id="666956b5" data-element_type="widget" data-widget_type="heading.default">
@@ -564,7 +550,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				<div class="elementor-element elementor-element-6ffdd4c elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="6ffdd4c" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="a0ec2c2b-6f68-492c-ac7a-041ce6347168" href="https://api.whatsapp.com/send?phone=620812345678&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
+			<a id="a0ec2c2b-6f68-492c-ac7a-041ce6347168" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">KONSULTASI SEKARANG</span>
@@ -573,7 +559,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 		</div>
 
         <script>jQuery(document).ready(function($) {
-                number = '0812345678';
+                number = '<?= $agent['no_wa']?>';
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
@@ -592,7 +578,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				<div class="elementor-element elementor-element-b85b302 elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="b85b302" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="054c0005-381f-4d17-bb0c-dca067acd94b" href="https://api.whatsapp.com/send?phone=620812345678&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
+			<a id="054c0005-381f-4d17-bb0c-dca067acd94b" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">KONSULTASI SEKARANG</span>
@@ -601,7 +587,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 		</div>
 
         <script>jQuery(document).ready(function($) {
-                number = '0812345678';
+                number = '<?= $agent['no_wa']?>';
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
@@ -620,7 +606,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				<div class="elementor-element elementor-element-0125ca7 elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="0125ca7" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="2f8bfb8c-4ba3-4679-bb57-08998b13e25d" href="https://api.whatsapp.com/send?phone=620812345678&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
+			<a id="2f8bfb8c-4ba3-4679-bb57-08998b13e25d" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">KONSULTASI SEKARANG</span>
@@ -629,7 +615,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 		</div>
 
         <script>jQuery(document).ready(function($) {
-                number = '0812345678';
+                number = '<?= $agent['no_wa']?>';
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
@@ -652,7 +638,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 				<div class="elementor-element elementor-element-4bcc07f elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="4bcc07f" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="015676dc-bf3b-4350-9219-478f4b1e7989" href="https://api.whatsapp.com/send?phone=620812345678&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
+			<a id="015676dc-bf3b-4350-9219-478f4b1e7989" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaykum%2C%20saya%20mau%20informasi%20Umroh%202024..%20" target="_blank" class="elementor-button-link elementor-button button-1746 elementor-size-sm">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">KONSULTASI SEKARANG</span>
@@ -661,7 +647,7 @@ body.elementor-page .elementor-widget-menu-anchor{margin-bottom:0}</style>		<div
 		</div>
 
         <script>jQuery(document).ready(function($) {
-                number = '0812345678';
+                number = '<?= $agent['no_wa']?>';
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
@@ -1062,5 +1048,15 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 <script src="<?= base_url()?>/public/assets/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.23.1" id="elementor-frontend-js"></script>
 <script src="<?= base_url()?>/public/assets/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.21.2" id="pro-elements-handlers-js"></script>
 			<script>/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);</script>
-				</body>
+		
+<?php 
+	if(!empty($pixel)){
+		foreach ($pixel as $pixel) {
+			echo $pixel['code_pixel'];
+		}
+	}
+?>
+
+		
+		</body>
 </html>
