@@ -4,6 +4,92 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    public function test_page($username, $page)
+    {
+        $db = db_connect();
+
+        // Mengambil subdomain pertama
+        // $username = $parts[0];
+
+        $data['agent'] = $db->query("
+            SELECT
+                *
+            FROM agent 
+            WHERE username = '$username'
+            AND (deleted_at = '0000-00-00 00:00:00' OR deleted_at IS NULL)
+        ")->getRowArray();
+
+        if($data['agent']){
+
+            $pk_id_agent = $data['agent']['pk_id_agent'];
+    
+            $produk = $db->query("
+                SELECT
+                    *
+                FROM produk
+                WHERE page = '$page'
+            ")->getRowArray();
+    
+            if($produk){
+                $data['pixel'] = $db->query("
+                    SELECT
+                        *
+                    FROM pixel_produk
+                    WHERE fk_id_produk = $produk[pk_id_produk]
+                    AND fk_id_agent = $pk_id_agent
+                    AND (deleted_at = '0000-00-00 00:00:00' OR deleted_at IS NULL)
+                ")->getResultArray();
+            } else {
+                $produk = $db->query("
+                    SELECT
+                        *
+                    FROM produk_travel
+                    WHERE page = '$page'
+                ")->getRowArray();
+    
+                $data['pixel'] = $db->query("
+                    SELECT
+                        *
+                    FROM pixel_produk_travel
+                    WHERE fk_id_produk_travel = $produk[pk_id_produk_travel]
+                    AND fk_id_agent = $pk_id_agent
+                    AND (deleted_at = '0000-00-00 00:00:00' OR deleted_at IS NULL)
+                ")->getResultArray();
+            }
+    
+            if($data['agent']){
+                if($page == 'badal-haji'){
+                    return view('landing_page/badal-haji', $data);
+                } else if($page == 'kelas-gratis'){
+                    return view('landing_page/kelas-gratis', $data);
+                } else if($page == 'umroh-edukasi'){
+                    return view('landing_page/umroh-edukasi', $data);
+                } else if($page == 'umroh-tanur-2024'){
+                    return view('landing_page/umroh-tanur-2024', $data);
+                } else if($page == 'live-webinar'){
+                    return view('landing_page/live-webinar', $data);
+                } else if($page == 'live-webinar-umroh-mudah'){
+                    return view('landing_page/live-webinar-umroh-mudah', $data);
+                } else if($page == 'promo-badalumroh'){
+                    return view('landing_page/promo-badalumroh', $data);
+                } else if($page == 'umroh-ramadhan-hemat'){
+                    return view('landing_page/umroh-ramadhan-hemat', $data);
+                } else if($page == 'live-webinar-haji-tanpa-antri'){
+                    return view('landing_page/live-webinar-haji-tanpa-antri', $data);
+                } else if($page == 'umroh-mudah'){
+                    return view('landing_page/umroh-mudah', $data);
+                } else {
+                    throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+                }
+            } else {
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            }
+        } else {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
+    }
+
     public function landing_page($page)
     {
         $db = db_connect();
@@ -74,6 +160,16 @@ class Home extends BaseController
                     return view('landing_page/umroh-tanur-2024', $data);
                 } else if($page == 'live-webinar'){
                     return view('landing_page/live-webinar', $data);
+                } else if($page == 'live-webinar-umroh-mudah'){
+                    return view('landing_page/live-webinar-umroh-mudah', $data);
+                } else if($page == 'promo-badalumroh'){
+                    return view('landing_page/promo-badalumroh', $data);
+                } else if($page == 'umroh-ramadhan-hemat'){
+                    return view('landing_page/umroh-ramadhan-hemat', $data);
+                } else if($page == 'live-webinar-haji-tanpa-antri'){
+                    return view('landing_page/live-webinar-haji-tanpa-antri', $data);
+                } else if($page == 'umroh-mudah'){
+                    return view('landing_page/umroh-mudah', $data);
                 } else {
                     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
                 }

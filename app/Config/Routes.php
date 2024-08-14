@@ -14,4 +14,5 @@ $routes->get('/daerah/getKota', 'Daerah::getKota');
 $routes->get('/daerah/getProvinsi', 'Daerah::getProvinsi');
 $routes->get('/daerah/getDaerah', 'Daerah::getDaerah');
 $routes->get('/daerah/search', 'Daerah::search');
+$routes->get('/(.*)/(.*)', 'Home::test_page/$1/$2');
 $routes->get('/(.*)', 'Home::landing_page/$1');
