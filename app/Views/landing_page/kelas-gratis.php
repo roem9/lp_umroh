@@ -159,20 +159,6 @@ flexibility(document.documentElement);
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-ce576c1 elementor-widget elementor-widget-spg_pixel" data-id="ce576c1" data-element_type="widget" data-widget_type="spg_pixel.default">
 				<div class="elementor-widget-container">
-			            <!-- Facebook Pixel Code -->
-            <script>!function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                    n.queue=[];t=b.createElement(e);t.async=!0;
-                    t.src=v;s=b.getElementsByTagName(e)[0];
-                    s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '357118257189921');
-                fbq('track', 'PageView');
-                fbq('track', 'ViewContent');</script>
-        <noscript><img decoding="async" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=357118257189921&ev=PageView&noscript=1"></noscript>
-        <!-- End Facebook Pixel Code -->
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-77ac47ea elementor-widget elementor-widget-heading" data-id="77ac47ea" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
@@ -1379,5 +1365,13 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 <script src="<?= base_url()?>/public/assets/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.23.4" id="elementor-frontend-js"></script>
 <script src="<?= base_url()?>/public/assets/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.21.2" id="pro-elements-handlers-js"></script>
 			<script>/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);</script>
+
+<?php 
+	if(!empty($pixel)){
+		foreach ($pixel as $pixel) {
+			echo $pixel['code_pixel'];
+		}
+	}
+?>
 				</body>
 </html>
