@@ -10,7 +10,7 @@
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Badal Haji - Yuk Umroh">
-	<meta property="og:description" content="Badal Haji 1445 H Obati Kerinduan Kepada Almarhum dengan Kirim Pahala Haji Untuk Orang Terkasih. Penuhi Panggilan Suci untuk Mereka: Badal Haji, Jalan Mulia Mengenang yang Tercinta Informasi Lebih Lanjut Apa Badal Haji itu? Badal Haji disebut dengan istilah al-hajju &#8216;anil ghair, adalah mewakilkan pelaksanaan haji untuk orang lain. Pelaksanaannya boleh dilakukan siapa saja dengan syarat &hellip; Badal Haji Read More &raquo;">
+	<meta property="og:description" content="Badal Haji 1446 H Obati Kerinduan Kepada Almarhum dengan Kirim Pahala Haji Untuk Orang Terkasih. Penuhi Panggilan Suci untuk Mereka: Badal Haji, Jalan Mulia Mengenang yang Tercinta Informasi Lebih Lanjut Apa Badal Haji itu? Badal Haji disebut dengan istilah al-hajju &#8216;anil ghair, adalah mewakilkan pelaksanaan haji untuk orang lain. Pelaksanaannya boleh dilakukan siapa saja dengan syarat &hellip; Badal Haji Read More &raquo;">
 	<meta property="og:url" content="/badal-umroh/badal-haji/">
 	<meta property="og:site_name" content="Yuk Umroh">
 	<meta property="article:modified_time" content="2024-06-08T11:30:34+00:00">
@@ -168,7 +168,7 @@ flexibility(document.documentElement);
 				<div class="elementor-widget-container">
 			<style>/*! elementor - v3.23.0 - 15-07-2024 */
 .elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style>
-<h6 class="elementor-heading-title elementor-size-default">Badal Haji 1445 H</h6>		</div>
+<h6 class="elementor-heading-title elementor-size-default">Badal Haji 1446 H</h6>		</div>
 				</div>
 				<div class="elementor-element elementor-element-51710ad elementor-widget elementor-widget-heading" data-id="51710ad" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -186,7 +186,7 @@ flexibility(document.documentElement);
 						<div class="elementor-element elementor-element-ba33e2e elementor-align-left elementor-widget elementor-widget-spg_button_whatsapp" data-id="ba33e2e" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="f1a92534-de81-49a0-813d-cb9d2d98b3cd" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
+			<a id="f1a92534-de81-49a0-813d-cb9d2d98b3cd" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">Informasi Lebih Lanjut</span>
@@ -199,7 +199,7 @@ flexibility(document.documentElement);
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
-                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya';
+                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya';
                 $('#f1a92534-de81-49a0-813d-cb9d2d98b3cd').attr('href', link);
 
             });</script>
@@ -300,7 +300,7 @@ flexibility(document.documentElement);
 				<div class="elementor-element elementor-element-1d00fd2 elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="1d00fd2" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="6bc8c5c2-0c5b-4aa2-815a-b5e28105012a" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
+			<a id="6bc8c5c2-0c5b-4aa2-815a-b5e28105012a" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">Informasi Lebih Lanjut</span>
@@ -313,7 +313,7 @@ flexibility(document.documentElement);
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
-                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya';
+                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya';
                 $('#6bc8c5c2-0c5b-4aa2-815a-b5e28105012a').attr('href', link);
 
             });</script>
@@ -908,7 +908,7 @@ Disampaikan di tempat yang spesial (tanah suci) dan di waktu yang spesial (musim
 				<div class="elementor-element elementor-element-8fdd334 elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="8fdd334" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="de7ffece-85de-4bd2-b783-662688d0cb92" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
+			<a id="de7ffece-85de-4bd2-b783-662688d0cb92" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">Informasi Lebih Lanjut</span>
@@ -921,7 +921,7 @@ Disampaikan di tempat yang spesial (tanah suci) dan di waktu yang spesial (musim
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
-                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya';
+                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya';
                 $('#de7ffece-85de-4bd2-b783-662688d0cb92').attr('href', link);
 
             });</script>
@@ -982,12 +982,12 @@ Disampaikan di tempat yang spesial (tanah suci) dan di waktu yang spesial (musim
 				</div>
 				<div class="elementor-element elementor-element-401cd110 elementor-widget elementor-widget-heading" data-id="401cd110" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">PROMO BADAL HAJI 1445 H</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">PROMO BADAL HAJI 1446 H</h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-42df6d1 elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="42df6d1" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="03086410-0d89-4bdb-b0a6-e0c539ba6afb" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
+			<a id="03086410-0d89-4bdb-b0a6-e0c539ba6afb" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
 				<span class="elementor-button-content-wrapper">
 											<span class="elementor-align-icon-left elementor-button-icon">
 							<img decoding="async" data-src="<?= base_url()?>/public/assets/wp-content/plugins/star-page-generator-main/assets/images/whatsapp.svg" alt="" height="15px" width="15px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" style="--smush-placeholder-width: 15px; --smush-placeholder-aspect-ratio: 15/15;"><noscript><img decoding="async" src="<?= base_url()?>/public/assets/wp-content/plugins/star-page-generator-main/assets/images/whatsapp.svg" alt="" height="15px" width="15px"></noscript>
@@ -1003,7 +1003,7 @@ Disampaikan di tempat yang spesial (tanah suci) dan di waktu yang spesial (musim
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
-                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya';
+                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya';
                 $('#03086410-0d89-4bdb-b0a6-e0c539ba6afb').attr('href', link);
 
             });</script>
@@ -1036,7 +1036,7 @@ Jangan Lewatkan Kesempatan Ini Selagi Ada Rezeki, Kita Tidak Tahu Apa yang Akan 
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-6881ff2 elementor-widget elementor-widget-heading" data-id="6881ff2" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Beberapa bukti transaksi dan amanah jamaah lain untuk Badal haji 1445 H</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">Beberapa bukti transaksi dan amanah jamaah lain untuk Badal haji 1446 H</h2>		</div>
 				</div>
 					</div>
 		</div>
@@ -1111,7 +1111,7 @@ Jangan Lewatkan Kesempatan Ini Selagi Ada Rezeki, Kita Tidak Tahu Apa yang Akan 
 				<div class="elementor-element elementor-element-c795782 elementor-align-center elementor-widget elementor-widget-spg_button_whatsapp" data-id="c795782" data-element_type="widget" data-widget_type="spg_button_whatsapp.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
-			<a id="99ab6b20-14e7-46a1-86d7-148b9ee35949" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
+			<a id="99ab6b20-14e7-46a1-86d7-148b9ee35949" href="https://api.whatsapp.com/send?phone=<?= $agent['no_wa']?>&amp;text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya" target="_blank" class="elementor-button-link elementor-button button-4934 elementor-size-lg">
 				<span class="elementor-button-content-wrapper">
 					
 					<span class="elementor-button-text">Informasi Lebih Lanjut</span>
@@ -1124,7 +1124,7 @@ Jangan Lewatkan Kesempatan Ini Selagi Ada Rezeki, Kita Tidak Tahu Apa yang Akan 
                 number = number.replace(/[^0-9]/, '');
                 number = number.replace(/^620/, '62');
                 number = number.replace(/^0/, '62');
-                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201445%20H.%20Mohon%20infornya';
+                link = 'https://api.whatsapp.com/send?phone='+number+'&text=Assalamualaikum%20kak%2C%20mau%20daftar%20Badal%20Haji%201446%20H.%20Mohon%20infornya';
                 $('#99ab6b20-14e7-46a1-86d7-148b9ee35949').attr('href', link);
 
             });</script>

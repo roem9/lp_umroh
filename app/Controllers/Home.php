@@ -78,7 +78,10 @@ class Home extends BaseController
                     return view('landing_page/live-webinar-haji-tanpa-antri', $data);
                 } else if($page == 'umroh-mudah'){
                     return view('landing_page/umroh-mudah', $data);
+                } else if($page == 'umroh-berlimpah-plus-lk'){
+                    return view('landing_page/umroh-berlimpah-plus-lk', $data);
                 } else {
+                    // return view('landing_page/umroh-berlimpah-plus-lk', $data);
                     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
                 }
             } else {
@@ -170,6 +173,8 @@ class Home extends BaseController
                     return view('landing_page/live-webinar-haji-tanpa-antri', $data);
                 } else if($page == 'umroh-mudah'){
                     return view('landing_page/umroh-mudah', $data);
+                } else if($page == 'umroh-berlimpah-plus-lk'){
+                    return view('landing_page/umroh-berlimpah-plus-lk', $data);
                 } else {
                     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
                 }
