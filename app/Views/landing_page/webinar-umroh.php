@@ -646,6 +646,14 @@
 			return d
 		}
 	</script>
+
+	<?php
+	if (!empty($pixel)) {
+		foreach ($pixel as $pixel) {
+			echo $pixel['code_pixel'];
+		}
+	}
+	?>
 </body>
 
 </html>
