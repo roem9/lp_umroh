@@ -126,3 +126,6 @@ nb-configuration.xml
 /phpunit*.xml
 
 .htaccess
+
+public/assets/template-lp
+app/views/landing_page/variable.php

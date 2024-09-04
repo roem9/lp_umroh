@@ -84,6 +84,8 @@ class Home extends BaseController
                     return view('landing_page/umroh-12-hari-garuda-surabaya', $data);
                 } else if ($page == 'webinar-umroh') {
                     return view('landing_page/webinar-umroh', $data);
+                } else if ($page == 'webinar-haji') {
+                    return view('landing_page/webinar-haji', $data);
                 } else {
                     // return view('landing_page/umroh-berlimpah-plus-lk', $data);
                     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
@@ -182,6 +184,8 @@ class Home extends BaseController
                     return view('landing_page/umroh-12-hari-garuda-surabaya', $data);
                 } else if ($page == 'webinar-umroh') {
                     return view('landing_page/webinar-umroh', $data);
+                } else if ($page == 'webinar-haji') {
+                    return view('landing_page/webinar-haji', $data);
                 } else {
                     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
                 }
