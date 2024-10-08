@@ -58,38 +58,39 @@ class Home extends BaseController
             }
 
             if ($data['agent']) {
-                if ($page == 'badal-haji') {
-                    return view('landing_page/badal-haji', $data);
-                } else if ($page == 'kelas-gratis') {
-                    return view('landing_page/kelas-gratis', $data);
-                } else if ($page == 'umroh-edukasi') {
-                    return view('landing_page/umroh-edukasi', $data);
-                } else if ($page == 'umroh-tanur-2024') {
-                    return view('landing_page/umroh-tanur-2024', $data);
-                } else if ($page == 'live-webinar') {
-                    return view('landing_page/live-webinar', $data);
-                } else if ($page == 'live-webinar-umroh-mudah') {
-                    return view('landing_page/live-webinar-umroh-mudah', $data);
-                } else if ($page == 'promo-badalumroh') {
-                    return view('landing_page/promo-badalumroh', $data);
-                } else if ($page == 'umroh-ramadhan-hemat') {
-                    return view('landing_page/umroh-ramadhan-hemat', $data);
-                } else if ($page == 'live-webinar-haji-tanpa-antri') {
-                    return view('landing_page/live-webinar-haji-tanpa-antri', $data);
-                } else if ($page == 'umroh-mudah') {
-                    return view('landing_page/umroh-mudah', $data);
-                } else if ($page == 'umroh-berlimpah-plus-lk') {
-                    return view('landing_page/umroh-berlimpah-plus-lk', $data);
-                } else if ($page == 'umroh-12-hari-garuda-surabaya') {
-                    return view('landing_page/umroh-12-hari-garuda-surabaya', $data);
-                } else if ($page == 'webinar-umroh') {
-                    return view('landing_page/webinar-umroh', $data);
-                } else if ($page == 'webinar-haji') {
-                    return view('landing_page/webinar-haji', $data);
-                } else {
-                    // return view('landing_page/umroh-berlimpah-plus-lk', $data);
-                    throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
-                }
+                return view("landing_page/$page", $data);
+                // if ($page == 'badal-haji') {
+                //     return view('landing_page/badal-haji', $data);
+                // } else if ($page == 'kelas-gratis') {
+                //     return view('landing_page/kelas-gratis', $data);
+                // } else if ($page == 'umroh-edukasi') {
+                //     return view('landing_page/umroh-edukasi', $data);
+                // } else if ($page == 'umroh-tanur-2024') {
+                //     return view('landing_page/umroh-tanur-2024', $data);
+                // } else if ($page == 'live-webinar') {
+                //     return view('landing_page/live-webinar', $data);
+                // } else if ($page == 'live-webinar-umroh-mudah') {
+                //     return view('landing_page/live-webinar-umroh-mudah', $data);
+                // } else if ($page == 'promo-badalumroh') {
+                //     return view('landing_page/promo-badalumroh', $data);
+                // } else if ($page == 'umroh-ramadhan-hemat') {
+                //     return view('landing_page/umroh-ramadhan-hemat', $data);
+                // } else if ($page == 'live-webinar-haji-tanpa-antri') {
+                //     return view('landing_page/live-webinar-haji-tanpa-antri', $data);
+                // } else if ($page == 'umroh-mudah') {
+                //     return view('landing_page/umroh-mudah', $data);
+                // } else if ($page == 'umroh-berlimpah-plus-lk') {
+                //     return view('landing_page/umroh-berlimpah-plus-lk', $data);
+                // } else if ($page == 'umroh-12-hari-garuda-surabaya') {
+                //     return view('landing_page/umroh-12-hari-garuda-surabaya', $data);
+                // } else if ($page == 'webinar-umroh') {
+                //     return view('landing_page/webinar-umroh', $data);
+                // } else if ($page == 'webinar-haji') {
+                //     return view('landing_page/webinar-haji', $data);
+                // } else {
+                //     // return view('landing_page/umroh-berlimpah-plus-lk', $data);
+                //     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+                // }
             } else {
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
             }
@@ -158,37 +159,38 @@ class Home extends BaseController
             }
 
             if ($data['agent']) {
-                if ($page == 'badal-haji') {
-                    return view('landing_page/badal-haji', $data);
-                } else if ($page == 'kelas-gratis') {
-                    return view('landing_page/kelas-gratis', $data);
-                } else if ($page == 'umroh-edukasi') {
-                    return view('landing_page/umroh-edukasi', $data);
-                } else if ($page == 'umroh-tanur-2024') {
-                    return view('landing_page/umroh-tanur-2024', $data);
-                } else if ($page == 'live-webinar') {
-                    return view('landing_page/live-webinar', $data);
-                } else if ($page == 'live-webinar-umroh-mudah') {
-                    return view('landing_page/live-webinar-umroh-mudah', $data);
-                } else if ($page == 'promo-badalumroh') {
-                    return view('landing_page/promo-badalumroh', $data);
-                } else if ($page == 'umroh-ramadhan-hemat') {
-                    return view('landing_page/umroh-ramadhan-hemat', $data);
-                } else if ($page == 'live-webinar-haji-tanpa-antri') {
-                    return view('landing_page/live-webinar-haji-tanpa-antri', $data);
-                } else if ($page == 'umroh-mudah') {
-                    return view('landing_page/umroh-mudah', $data);
-                } else if ($page == 'umroh-berlimpah-plus-lk') {
-                    return view('landing_page/umroh-berlimpah-plus-lk', $data);
-                } else if ($page == 'umroh-12-hari-garuda-surabaya') {
-                    return view('landing_page/umroh-12-hari-garuda-surabaya', $data);
-                } else if ($page == 'webinar-umroh') {
-                    return view('landing_page/webinar-umroh', $data);
-                } else if ($page == 'webinar-haji') {
-                    return view('landing_page/webinar-haji', $data);
-                } else {
-                    throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
-                }
+                return view("landing_page/$page", $data);
+                // if ($page == 'badal-haji') {
+                //     return view('landing_page/badal-haji', $data);
+                // } else if ($page == 'kelas-gratis') {
+                //     return view('landing_page/kelas-gratis', $data);
+                // } else if ($page == 'umroh-edukasi') {
+                //     return view('landing_page/umroh-edukasi', $data);
+                // } else if ($page == 'umroh-tanur-2024') {
+                //     return view('landing_page/umroh-tanur-2024', $data);
+                // } else if ($page == 'live-webinar') {
+                //     return view('landing_page/live-webinar', $data);
+                // } else if ($page == 'live-webinar-umroh-mudah') {
+                //     return view('landing_page/live-webinar-umroh-mudah', $data);
+                // } else if ($page == 'promo-badalumroh') {
+                //     return view('landing_page/promo-badalumroh', $data);
+                // } else if ($page == 'umroh-ramadhan-hemat') {
+                //     return view('landing_page/umroh-ramadhan-hemat', $data);
+                // } else if ($page == 'live-webinar-haji-tanpa-antri') {
+                //     return view('landing_page/live-webinar-haji-tanpa-antri', $data);
+                // } else if ($page == 'umroh-mudah') {
+                //     return view('landing_page/umroh-mudah', $data);
+                // } else if ($page == 'umroh-berlimpah-plus-lk') {
+                //     return view('landing_page/umroh-berlimpah-plus-lk', $data);
+                // } else if ($page == 'umroh-12-hari-garuda-surabaya') {
+                //     return view('landing_page/umroh-12-hari-garuda-surabaya', $data);
+                // } else if ($page == 'webinar-umroh') {
+                //     return view('landing_page/webinar-umroh', $data);
+                // } else if ($page == 'webinar-haji') {
+                //     return view('landing_page/webinar-haji', $data);
+                // } else {
+                //     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+                // }
             } else {
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
             }
