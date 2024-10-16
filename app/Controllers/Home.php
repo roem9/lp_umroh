@@ -160,6 +160,8 @@ class Home extends BaseController
                 ")->getResultArray();
             }
 
+            $data['produk'] = $produk;
+
             if ($data['agent']) {
                 return view("landing_page/$page", $data);
                 // if ($page == 'badal-haji') {
