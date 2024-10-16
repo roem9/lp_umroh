@@ -27,7 +27,8 @@ class ProdukModel extends Model
         'komisi_leader_agent',
         'passive_income_leader_agent',
         'json_lp',
-        'is_active'
+        'is_active',
+        'mailketing_list_id'
     ];
 
     // Dates

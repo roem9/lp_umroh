@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\CustomerModel;
 use App\Models\AgentModel;
 use App\Models\ProdukModel;
 use App\Models\PenjualanProdukModel;
 use App\Models\PenjualanProdukTravelModel;
+use App\Controllers\EmailSender;
 
 class Registrasi extends BaseController
 {
@@ -15,20 +17,24 @@ class Registrasi extends BaseController
     public $penjualanProdukModel;
     public $penjualanProdukTravelModel;
     public $db;
+    public $session;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->customerModel = new CustomerModel();
         $this->agentModel = new AgentModel();
         $this->produkModel = new ProdukModel();
         $this->penjualanProdukModel = new PenjualanProdukModel();
         $this->penjualanProdukTravelModel = new PenjualanProdukTravelModel();
         $this->db = db_connect();
+        $this->session = session();
     }
 
-    public function registrasi($username, $page){
+    public function registrasi($username, $page)
+    {
         // Mendapatkan URL lengkap
         $currentUrl = current_url();
-        
+
         // Mendapatkan hanya path dari URL
         $currentPath = $this->request->getPath();
         $produk = explode('/', $currentPath);
@@ -54,7 +60,7 @@ class Registrasi extends BaseController
             WHERE page = '$page'
         ")->getRowArray();
 
-        if(!$produk){
+        if (!$produk) {
             $produk = $db->query("
                 SELECT
                     *
@@ -63,7 +69,7 @@ class Registrasi extends BaseController
             ")->getRowArray();
         }
 
-        if($data['agent']){
+        if ($data['agent']) {
             $data['produk'] = $produk;
             $data['title'] = "Setor Data Peminat $produk[nama_produk]";
 
@@ -76,7 +82,7 @@ class Registrasi extends BaseController
 
             $data['message'] = str_replace(array_keys($replace), array_values($replace), $data['message']);
 
-            if($produk['to_agent'] == 1){
+            if ($produk['to_agent'] == 1) {
                 return view('form-agent', $data);
             } else {
                 return view('form-registrasi', $data);
@@ -86,19 +92,20 @@ class Registrasi extends BaseController
         }
     }
 
-    public function agent($username = null){
+    public function agent($username = null)
+    {
         $db = db_connect();
-        
+
         // Mendapatkan URL lengkap
         $currentUrl = current_url();
-        
+
         // Mendapatkan hanya path dari URL
         $currentPath = $this->request->getPath();
         $produk = explode('/', $currentPath);
 
-        if($username == ''){
+        if ($username == '') {
             $data['title'] = "Setor Data Peminat Agent";
-    
+
             $data['message'] = $db->query("
                 SELECT 
                     *
@@ -109,7 +116,7 @@ class Registrasi extends BaseController
             return view('form-agent', $data);
         } else {
             $username = $produk[2];
-    
+
             $data['agent'] = $db->query("
                 SELECT
                     *
@@ -117,19 +124,19 @@ class Registrasi extends BaseController
                 WHERE username = '$username'
                 AND (deleted_at = '0000-00-00 00:00:00' OR deleted_at IS NULL)
             ")->getRowArray();
-    
+
             $pk_id_agent = $data['agent']['pk_id_agent'];
-    
-            if($data['agent']){
+
+            if ($data['agent']) {
                 $data['title'] = "Setor Data Peminat Agent";
-    
+
                 $data['message'] = $db->query("
                     SELECT 
                         *
                     FROM system_parameter
                     WHERE setting_name = 'message_success_customer'
                 ")->getRowArray();
-    
+
                 return view('form-agent', $data);
             } else {
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
@@ -160,7 +167,7 @@ class Registrasi extends BaseController
             $tipe_agent = $this->request->getPost('tipe_agent');
             if ($tipe_agent == '') {
                 $response['error']['tipe_agent'] = 'Paket harus diisi';
-                
+
                 $failed = true;
                 return json_encode($response);
             }
@@ -174,10 +181,10 @@ class Registrasi extends BaseController
         $is_send_wa = 0;
         $wa_message = '';
 
-        if($this->customerModel->save($data) === true){
+        if ($this->customerModel->save($data) === true) {
             $fk_id_customer = $this->customerModel->getInsertID();
-            
-            if($data['jenis_produk'] == 'produk'){
+
+            if ($data['jenis_produk'] == 'produk') {
                 $produk = $this->db->query("
                     SELECT
                         *
@@ -201,7 +208,6 @@ class Registrasi extends BaseController
 
                     $failed = true;
                 }
-
             } else {
                 $produk = $this->db->query("
                     SELECT
@@ -241,7 +247,7 @@ class Registrasi extends BaseController
         if ($this->db->transStatus() === false || $failed) {
             $this->db->transRollback();
 
-            if(!isset($response['error'])){
+            if (!isset($response['error'])) {
                 $response = [
                     'status' => 'error',
                     'message' => 'Gagal menambahkan penjualan'
@@ -250,16 +256,16 @@ class Registrasi extends BaseController
         } else {
             $this->db->transCommit();
 
-            if($is_send_wa){
+            if ($is_send_wa) {
                 $messageData = $wa_message;
-    
+
                 $replace = [
                     '$nama_customer$' => $data['nama_customer']
                 ];
-    
+
                 // Replace placeholders with actual values
                 $message = str_replace(array_keys($replace), array_values($replace), $messageData);
-    
+
                 send_wa($data['no_wa'], $message);
             }
 
@@ -272,7 +278,8 @@ class Registrasi extends BaseController
         return json_encode($response);
     }
 
-    public function saveAgent(){
+    public function saveAgent()
+    {
         $data = [
             'nama_agent' => $this->request->getPost('nama_agent'),
             'no_wa' => $this->request->getPost('no_wa'),
@@ -282,7 +289,7 @@ class Registrasi extends BaseController
             'tgl_bergabung' => date('Y-m-d')
         ];
 
-        if($this->agentModel->save($data) === true){
+        if ($this->agentModel->save($data) === true) {
             $response = [
                 'status' => 'success',
                 'message' => 'Berhasil mendaftarkan data Anda'
@@ -310,5 +317,87 @@ class Registrasi extends BaseController
         }
 
         return json_encode($response);
+    }
+
+    public function saveCustomer()
+    {
+        $produk = $this->produkModel->where('MD5(pk_id_produk)', $this->request->getPost('fk_id_produk'))->first();
+        $agent = $this->agentModel->where('MD5(pk_id_agent)', $this->request->getPost('fk_id_agent'))->first();
+
+        $waInput = $this->request->getPost('no_wa');
+
+        // Menghapus semua karakter kecuali angka
+        $sanitizedNumber = preg_replace('/\D/', '', $waInput);
+
+        // Mengganti awalan 08 dengan 62
+        if (strpos($sanitizedNumber, '08') === 0) {
+            $sanitizedNumber = '628' . substr($sanitizedNumber, 2);
+        }
+
+        $data = [
+            'nama_customer' => $this->request->getPost('nama_customer'),
+            'no_wa' => $sanitizedNumber,
+            'email' => $this->request->getPost('email'),
+            'fk_id_produk' => $produk['pk_id_produk'],
+            'fk_id_agent' => $agent['pk_id_agent']
+        ];
+
+        if ($this->customerModel->save($data) === true) {
+            $fk_id_customer = $this->customerModel->getInsertID();
+
+            $dataPenjualan = [
+                'fk_id_customer' => $fk_id_customer,
+                'fk_id_produk' => $produk['pk_id_produk'],
+                'tgl_closing' => date('Y-m-d H:i:s'),
+                'fk_id_travel' => $produk['fk_id_travel'],
+                'fk_id_agent_closing' => $data['fk_id_agent'],
+                'status' => 'lunas'
+            ];
+
+            if ($this->penjualanProdukModel->save($dataPenjualan) !== true) {
+                $response = [
+                    "error" => $this->penjualanProdukModel->errors()
+                ];
+
+                $failed = true;
+            }
+
+            $api_token = $this->db->query("
+                SELECT
+                    *
+                FROM system_parameter
+                WHERE setting_name = 'api_token_mailketing'
+            ")->getRowArray();
+
+            if ($produk['mailketing_list_id'] != '0' && $produk['mailketing_list_id'] != NULL) {
+                $first_name = $data['nama_customer']; //nama pengirim
+                $email = $data['email']; //email pengirim
+                $list_id = $produk['mailketing_list_id'];
+                $params = [
+                    'first_name' => $first_name,
+                    'email' => $email,
+                    'api_token' => $api_token['setting_value'],
+                    'list_id' => $list_id,
+                    'mobile' => $data['no_wa']
+                ];
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, "https://api.mailketing.co.id/api/v1/addsubtolist");
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $output = curl_exec($ch);
+                print_r($output);
+                curl_close($ch);
+            }
+
+            $this->session->setFlashdata('message', 'Berhasil mendaftarkan data Anda. Silakan cek Email Anda untuk bergabung ke grup');
+        } else {
+            $response = [
+                "error" => $this->customerModel->errors()
+            ];
+        }
+
+        // return redirect()->back();
+        return redirect()->to(previous_url());
     }
 }
