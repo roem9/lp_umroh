@@ -4981,7 +4981,7 @@ flexibility(document.documentElement);
                                         </div>
 
                                         <div id="elementor-tab-content-4101" class="elementor-tab-content elementor-clearfix" data-tab="1" role="region" aria-labelledby="elementor-tab-title-4101">
-                                            <p>Silahkan Klik tombol Daftar Sekarang&nbsp;<b><u><a href="https://mentoringumroh.com/page2-2/">DISINI</a></u></b></p>
+                                            <p>Silahkan Klik tombol Daftar Sekarang&nbsp;<b><u><a href="#daftar">DISINI</a></u></b></p>
                                         </div>
                                     </div>
                                     <div class="elementor-toggle-item">
